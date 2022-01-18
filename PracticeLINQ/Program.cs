@@ -40,6 +40,7 @@ namespace PracticeLINQ
 
             }
 
+            Console.ForegroundColor = ConsoleColor.White;
             Console.ReadLine();
         }
     }
