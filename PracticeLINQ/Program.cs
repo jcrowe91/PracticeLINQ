@@ -12,13 +12,31 @@ namespace PracticeLINQ
             //Create a list of video game names.
             //Order the list of games by length of the game name.
             //Use the lambda expression in this exercise as well.
-            //Metal Gear Solid, Resident Evil, Elder Scrolls, Super Smash Bros Melee
-            var videoGamesList = new List<string>() { "Metal Gear Solid", "Resident Evil", "Elder Scrolls", "Super Smash Bros Melee" };
+    
+            var videoGamesList = new List<string>() { "Metal Gear Solid", "Resident Evil 5", "Elder Scrolls", "Super Smash Bros Melee" };
+            var sortedByLength = videoGamesList.OrderBy(num => num.Length); //USED LAMBDA
+
+            Console.WriteLine($"Original List:");
+            Console.WriteLine("");
             
             foreach (var game in videoGamesList)
+            {                
+                Console.WriteLine($"Name : {game} Letters: {game.Length}");
+                Console.WriteLine("---------------------------------------------------------------");
+            }          
+
+            Console.WriteLine("");
+            Console.WriteLine("Press Enter to See List Sorted By Title Length!");
+            Console.ReadLine();
+            
+            foreach (var game in sortedByLength)
             {
-                Console.WriteLine(game.);
+                Console.WriteLine($"Name: {game} Numbers of Letters in Title: {game.Length}");
+                Console.WriteLine("--------------------------------------------------------------");               
+
             }
+
+            Console.ReadLine();
         }
     }
 }
